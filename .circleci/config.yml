@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:11.0.12-browsers
+      - image: cimg/openjdk:11.0.12-browsers
         auth:
           username: vinniiee
           password: Qwerty@12345
