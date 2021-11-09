@@ -4,6 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:11-browser-legacy
+        auth:
+          username: vinniiee
+          password: $DOCKERHUB_PASSWORD
 
     working_directory: ~/repo
 
