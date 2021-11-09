@@ -6,7 +6,7 @@ jobs:
       - image: cimg/openjdk:11.0.12-browsers
         auth:
           username: vinniiee
-          password: Qwerty@12345
+          password: $DOCKERHUB_PASSWORD
 
     working_directory: ~/repo
 
