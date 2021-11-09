@@ -3,16 +3,14 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:11-browser-legacy
-        auth:
-          username: vinniiee
-          password: $DOCKER_PASSWORD
+      - image: cimg/openjdk:11.0.12-browsers
+
 
     working_directory: ~/repo
 
     environment:
       MAVEN_OPTS:-Xmx3200m
-      DOCKER_PASSWORD: Qwerty@12345
+
 
     steps:
       - checkout

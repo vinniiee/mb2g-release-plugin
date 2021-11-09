@@ -3,11 +3,11 @@
     <servers>
         <server>
             <id>packagecloud.release</id>
-            <password>${PACKAGECLOUD_PASSWORD}</password>
+            <password>${env.PACKAGECLOUD_PASSWORD}</password>
         </server>
         <server>
             <id>packagecloud.snapshot</id>
-            <password>${PACKAGECLOUD_PASSWORD}</password>
+            <password>${env.PACKAGECLOUD_PASSWORD}</password>
         </server>
     </servers>
 </settings>
