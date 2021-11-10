@@ -27,8 +27,10 @@
             <password>${env.PACKAGECLOUD_PASSWORD}</password>
         </server>
         <server>
+
             <id>packagecloud.snapshot</id>
             <password>${env.PACKAGECLOUD_PASSWORD}</password>
+
         </server>
         <server>
             <id>github</id>
