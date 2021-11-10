@@ -9,5 +9,9 @@
             <id>packagecloud.snapshot</id>
             <password>${env.PACKAGECLOUD_PASSWORD}</password>
         </server>
+        <server>
+            <id>github</id>
+            <password>${env.GITHUB_PASSWORD}</password>
+        </server>
     </servers>
 </settings>

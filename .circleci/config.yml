@@ -19,8 +19,10 @@ jobs:
             - v1-dependencies-{{ checksum "pom.xml" }} # appends cache key with a hash of pom.xml file
             - v1-dependencies- # fallback in case previous cache key is not found
       - run: mvn dependency:go-offline
+      - run: git config user.email "vs28245@gmail.com"
+      - run: git config user.name "via CircleCI build"
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-      - run: mvn deploy -s .circleci/settings.xml
+      - run: mvn --batch-mode release:prepare release:perform -s .circleci/settings.xml
