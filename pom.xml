@@ -55,7 +55,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
             <configuration>
-                <scmCommentPrefix>[release-pliugin] [skip ci]</scmCommentPrefix>
+                <scmCommentPrefix>[release-plugin] [skip ci]</scmCommentPrefix>
             </configuration>
             </plugin>
 
