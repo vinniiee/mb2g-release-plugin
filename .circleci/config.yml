@@ -1,6 +1,8 @@
 version: 2.0
 
 jobs:
+  deploy-job:
+
   build:
     docker:
       - image: cimg/openjdk:11.0.12-browsers
@@ -19,6 +21,9 @@ jobs:
             - v1-dependencies-{{ checksum "pom.xml" }} # appends cache key with a hash of pom.xml file
             - v1-dependencies- # fallback in case previous cache key is not found
       - run: mvn dependency:go-offline
+      - add_ssh_keys:
+          fingerprints:
+            - "59:9c:65:5d:d5:a9:e7:ff:04:78:4d:e9:84:0f:c7:e4"
       - run: git config user.email "vs28245@gmail.com"
       - run: git config user.name "via CircleCI build"
       - save_cache:
